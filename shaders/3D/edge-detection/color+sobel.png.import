@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7ck613iaqcox"
-path="res://.godot/imported/sobel+color.png-ccba567c3b71d88e3cac4a2dcd2f507d.ctex"
+uid="uid://bmvgiiwhxxdwg"
+path="res://.godot/imported/color+sobel.png-a28ec14bcd9605bbf7027a0f60e1d447.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://shaders/3D/edge-detection/sobel+color.png"
-dest_files=["res://.godot/imported/sobel+color.png-ccba567c3b71d88e3cac4a2dcd2f507d.ctex"]
+source_file="res://shaders/3D/edge-detection/color+sobel.png"
+dest_files=["res://.godot/imported/color+sobel.png-a28ec14bcd9605bbf7027a0f60e1d447.ctex"]
 
 [params]
 

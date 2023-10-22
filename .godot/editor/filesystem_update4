@@ -1,4 +1,4 @@
 res://scenes/test_world_basic/test_world_basic.tscn
-res://shaders/3D/color-to-greyscale/weighed color-to-greyscale.gdshader
-res://shaders/3D/edge-detection/sobel-detection.gdshader
 res://shaders/3D/color-to-greyscale/weighted color-to-greyscale.gdshader
+res://shaders/3D/edge-detection/sobel-detection.gdshader
+res://scenes/test_world_basic/camera_pivot.gd
