@@ -71,7 +71,6 @@ mesh = SubResource("QuadMesh_dcf4f")
 skeleton = NodePath("../../camera_UI")
 
 [node name="camera_UI" type="Control" parent="camera_pivot"]
-visible = false
 z_index = 1
 layout_mode = 3
 anchors_preset = 15
