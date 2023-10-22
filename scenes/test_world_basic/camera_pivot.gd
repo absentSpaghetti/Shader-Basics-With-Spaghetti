@@ -2,7 +2,7 @@ extends Node3D
 
 @onready var cameraUI := $camera_UI
 
-var isOrbiting : bool = true
+var isOrbiting : bool = false
 var rotationSpeed : float = 0.5
 
 func _process(delta: float) -> void:

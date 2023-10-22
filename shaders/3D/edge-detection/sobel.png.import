@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d0lqaqglw4rjy"
-path="res://.godot/imported/sobel.png-d3b57cf5ff00cd94e7b40900aa84498d.ctex"
+path="res://.godot/imported/sobel.png-e44cee4e82dbbf72f2b8251676a800dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://shaders/edge-detection/sobel.png"
-dest_files=["res://.godot/imported/sobel.png-d3b57cf5ff00cd94e7b40900aa84498d.ctex"]
+source_file="res://shaders/3D/edge-detection/sobel.png"
+dest_files=["res://.godot/imported/sobel.png-e44cee4e82dbbf72f2b8251676a800dc.ctex"]
 
 [params]
 

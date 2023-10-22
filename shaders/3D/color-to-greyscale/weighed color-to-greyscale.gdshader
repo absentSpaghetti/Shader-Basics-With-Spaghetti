@@ -1,9 +1,11 @@
 // Weighed Color to Greyscale Shader written by absentSpaghetti
 //
-// This shader is a part of a tutorial Github repository
+// This shader is a part of my tutorial Github repository: https://github.com/absentSpaghetti/Shader-Basics-With-Spaghetti
 // Feel free to use, edit and share this shader according to your needs
 //
 // MIT License 
+//
+// prerequisites:
 
 shader_type spatial;
 render_mode unshaded, cull_disabled;
@@ -22,7 +24,7 @@ void fragment() {
 	
 //	 the colors are weighed because of how the human eye perceives color. Green and red contribute more than blue.
 	vec3 color_weights = vec3(texture_color.r * 0.3, texture_color.g * 0.59, texture_color.b * 0.11);
-	float new_color = (color_weights.r + color_weights.g + color_weights.b) / 3.0;
+	float new_color = (color_weights.r + color_weights.g + color_weights.b);
 	ALBEDO = vec3(new_color);
 	
 //	debug, uncomment to return to the screen_texture color

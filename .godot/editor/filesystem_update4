@@ -5,3 +5,5 @@ res://shaders/color-to-greyscale/weighed color-to-greyscale.gdshader
 res://autoload.gd
 res://scenes/test_world_basic/camera_pivot.gd
 res://shaders/edge-detection/sobel-detection.gdshader
+res://shaders/3D/color-to-greyscale/weighed color-to-greyscale.gdshader
+res://shaders/3D/edge-detection/sobel-detection.gdshader

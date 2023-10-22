@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpcrt07bbyfhw"
-path="res://.godot/imported/color-to-grey.png-dc1b4ec2901b777d255b9486e389e840.ctex"
+uid="uid://d1adn1ud3ay6u"
+path="res://.godot/imported/color.png-5c74d72a59eee5e9ea2125c3c1bbd88d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://shaders/color-to-greyscale/color-to-grey.png"
-dest_files=["res://.godot/imported/color-to-grey.png-dc1b4ec2901b777d255b9486e389e840.ctex"]
+source_file="res://shaders/3D/edge-detection/color.png"
+dest_files=["res://.godot/imported/color.png-5c74d72a59eee5e9ea2125c3c1bbd88d.ctex"]
 
 [params]
 
