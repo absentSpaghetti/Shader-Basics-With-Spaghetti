@@ -11,9 +11,22 @@ config_version=5
 [application]
 
 config/name="Shader-Basics-With-Spaghetti"
+config/description="Repository"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+autoload="*res://autoload.gd"
 
 [dotnet]
 
 project/assembly_name="Shader-Basics-With-Spaghetti"
+
+[input]
+
+take_screenshot={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194343,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
+}
