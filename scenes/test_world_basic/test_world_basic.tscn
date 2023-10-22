@@ -1,11 +1,11 @@
 [gd_scene load_steps=15 format=3 uid="uid://dkghn76dd0wiy"]
 
 [ext_resource type="Script" path="res://scenes/test_world_basic/camera_pivot.gd" id="1_xhwmj"]
-[ext_resource type="Shader" path="res://shaders/3D/color-to-greyscale/weighed color-to-greyscale.gdshader" id="2_3425d"]
+[ext_resource type="Shader" path="res://shaders/3D/color-to-greyscale/weighted color-to-greyscale.gdshader" id="2_iiyf1"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vdpyk"]
 render_priority = 0
-shader = ExtResource("2_3425d")
+shader = ExtResource("2_iiyf1")
 
 [sub_resource type="QuadMesh" id="QuadMesh_dcf4f"]
 material = SubResource("ShaderMaterial_vdpyk")

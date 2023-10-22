@@ -1,19 +1,21 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1698000077
+::res://::1698001264
 autoload.gd::GDScript::-1::1697997991::0::1::::<>Node<>::
 icon.svg::CompressedTexture2D::3750144342241123986::1697989202::1697989207::1::::<><>::
+README.md::TextFile::-1::1698000840::0::1::::<><>::
 ::res://scenes/::1697990844
-::res://scenes/test_world_basic/::1698000740
-camera_pivot.gd::GDScript::-1::1698000737::0::1::::<>Node3D<>::
-test_world_basic.tscn::PackedScene::7873986717031579672::1698000740::0::1::::<><>::res://scenes/test_world_basic/camera_pivot.gd<>res://shaders/3D/color-to-greyscale/weighed color-to-greyscale.gdshader
+::res://scenes/test_world_basic/::1698001264
+camera_pivot.gd::GDScript::-1::1698000857::0::1::::<>Node3D<>::
+test_world_basic.tscn::PackedScene::7873986717031579672::1698001264::0::1::::<><>::res://scenes/test_world_basic/camera_pivot.gd<>res://shaders/3D/color-to-greyscale/weigthed color-to-greyscale.gdshader
 ::res://shaders/::1698000077
 ::res://shaders/3D/::1698000077
-::res://shaders/3D/color-to-greyscale/::1698000780
+::res://shaders/3D/color-to-greyscale/::1698001264
 color-to-grey.png::CompressedTexture2D::3444449575298145288::1698000741::1698000823::1::::<><>::
 color.png::CompressedTexture2D::3951958166442982833::1697998250::1698000078::1::::<><>::
-weighed color-to-greyscale.gdshader::Shader::-1::1698000740::0::1::::<><>::
-::res://shaders/3D/edge-detection/::1698000740
+weighed color-to-greyscale.gdshader::Shader::-1::1698001263::0::1::::<><>::
+weigthed color-to-greyscale.gdshader::Shader::-1::1698001264::0::1::::<><>::
+::res://shaders/3D/edge-detection/::1698001264
 color.png::CompressedTexture2D::8984378748644152754::1697998162::1698000078::1::::<><>::
 sobel+color.png::CompressedTexture2D::7023677058075816827::1697998162::1698000078::1::::<><>::
-sobel-detection.gdshader::Shader::-1::1698000740::0::1::::<><>::
+sobel-detection.gdshader::Shader::-1::1698001264::0::1::::<><>::
 sobel.png::CompressedTexture2D::8937663619381811382::1697998162::1698000078::1::::<><>::
