@@ -36,7 +36,7 @@ void fragment() {
 	
 	vec4 texture_color = texture(screen_texture, SCREEN_UV); // sample screen texture
 	
-	mat2 I; // Matrix is essentially a vector (in this case Vector3), containing more Vectors (in this case, it contains 3 of Vector3s)
+	mat2 I; // Matrix is essentially an array of vectors (in this case vector2s)
 	for (int i = -1; i <= 1; i++ ) {
 	    for (int j = -1; j <= 1; j++) {
 	        vec3 sample_around_pixel = texelFetch(screen_texture, ivec2(FRAGCOORD.xy) + ivec2(i, j), 0).rgb; // lookup pixels on the screen_texture with given coordinates
@@ -57,9 +57,9 @@ void fragment() {
 	
 	ALBEDO = vec3(g);
 	
-//	color + sobel edge detection
+//	//color + sobel edge detection
 //	ALBEDO = texture_color.rgb * vec3(g);
 	
-//	debug, uncomment to return to the screen_texture color
+//	//debug, uncomment to return to the screen_texture color
 //	ALBEDO = texture_color.rgb;
 }

@@ -14,12 +14,12 @@ uniform sampler2D screen_texture : hint_screen_texture, filter_linear_mipmap; //
 uniform float min_step : hint_range(0.0, 1.0, 0.01) = 0.4;
 uniform float max_step : hint_range(0.0, 1.0, 0.01) = 0.6;
 
-// x direction matrix
+// x direction kernel
 const mat2 kx = mat2(
 	vec2(1, 0),
 	vec2(0, -1)
 );
-// y direction matrix 
+// y direction kernel 
 const mat2 ky = mat2(
 	vec2(0, 1),
 	vec2(-1, 0)
@@ -30,7 +30,7 @@ void fragment() {
 	
 	vec4 texture_color = texture(screen_texture, SCREEN_UV); // sample screen texture
 	
-	mat2 I; // Matrix is an array ov vectors, in this case, vector2s
+	mat2 I; // Matrix is essentially an array of vectors (in this case vector2s)
 	for (int i = -1; i <= 1; i++ ) {
 	    for (int j = -1; j <= 1; j++) {
 	        vec3 sample_around_pixel = texelFetch(screen_texture, ivec2(FRAGCOORD.xy) + ivec2(i, j), 0).rgb; // lookup pixels on the screen_texture with given coordinates
@@ -50,9 +50,9 @@ void fragment() {
 	
 	COLOR = vec4(vec3(g), 1.0);
 	
-//	color + robert cross edge detection
+//	//color + robert cross edge detection
 //	COLOR = vec4(texture_color.rgb * vec3(g), 1.0);
 	
-//	debug, uncomment to return to the screen_texture color
+//	//debug, uncomment to return to the screen_texture color
 //	COLOR = texture_color.rgba;
 }

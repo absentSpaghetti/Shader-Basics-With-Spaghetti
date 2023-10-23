@@ -29,8 +29,8 @@ void fragment() {
 //	 the colors are weighed because of how the human eye perceives color. Green and red contribute more than blue.
 	vec3 color_weights = vec3(texture_color.r * 0.3, texture_color.g * 0.59, texture_color.b * 0.11);
 	float new_color = (color_weights.r + color_weights.g + color_weights.b);
-	ALBEDO = vec3(new_color);
+	ALBEDO = vec3(new_color); // assign the average of all colros to the ALBEDO value
 	
-//	debug, uncomment to return to the screen_texture color
+//	//debug, uncomment to return to the screen_texture color
 //	ALBEDO = texture_color.rgb;
 }
