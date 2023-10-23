@@ -1,11 +1,11 @@
 // Sobel Edge Detection Shader written by absentSpaghetti
 //
-// This shader is a part of my tutorial Github repository: https://github.com/absentSpaghetti/Shader-Basics-With-Spaghetti
+// This shader is a part of my tutorial/learning Github repository: https://github.com/absentSpaghetti/Shader-Basics-With-Spaghetti
 // Feel free to use, edit and share this shader according to your needs
 //
 // MIT License 
 //
-// prerequisites: color-to-greyscale
+// prerequisites: color-to-greyscale, simple-box-blur
 
 shader_type canvas_item;
 render_mode unshaded;

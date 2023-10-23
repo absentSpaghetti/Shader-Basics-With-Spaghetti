@@ -1,24 +1,22 @@
 [gd_scene load_steps=18 format=3 uid="uid://dkghn76dd0wiy"]
 
 [ext_resource type="Script" path="res://scenes/test_world_basic/camera_pivot.gd" id="1_xhwmj"]
-[ext_resource type="Shader" path="res://shaders/post-process/3D/edge-detection/3D-sobel-detection.gdshader" id="2_nhisn"]
-[ext_resource type="Shader" path="res://shaders/post-process/2D/edge-detection/2D-sobel-detection.gdshader" id="3_adm3g"]
+[ext_resource type="Shader" path="res://shaders/post-process/3D/blurs/3D-simple-box-blur.gdshader" id="2_d47ul"]
+[ext_resource type="Shader" path="res://shaders/post-process/2D/blurs/2D-simple-box-blur.gdshader" id="3_hu8ik"]
 [ext_resource type="Texture2D" uid="uid://bjq8qgbj6txob" path="res://scenes/test_world_basic/City Landscape - Bing Hui Yau.jpg" id="4_bt8e2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vdpyk"]
-render_priority = 0
-shader = ExtResource("2_nhisn")
-shader_parameter/min_step = 0.4
-shader_parameter/max_step = 0.6
+render_priority = -1
+shader = ExtResource("2_d47ul")
+shader_parameter/mix_amount = 1.0
 
 [sub_resource type="QuadMesh" id="QuadMesh_dcf4f"]
 material = SubResource("ShaderMaterial_vdpyk")
 size = Vector2(2, 2)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_uaj2q"]
-shader = ExtResource("3_adm3g")
-shader_parameter/min_step = 0.4
-shader_parameter/max_step = 0.6
+shader = ExtResource("3_hu8ik")
+shader_parameter/mix_amount = 1.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0qgtd"]
 albedo_color = Color(0, 0, 0, 1)
@@ -76,7 +74,6 @@ transform = Transform3D(1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, 
 
 [node name="post_in_3D" type="MeshInstance3D" parent="camera_pivot/camera"]
 transform = Transform3D(1, 0, 0, 0, 0.906308, -0.422618, 0, 0.422618, 0.906308, 0, -0.122144, -4.47047)
-visible = false
 mesh = SubResource("QuadMesh_dcf4f")
 skeleton = NodePath("../../camera_UI")
 metadata/_edit_group_ = true

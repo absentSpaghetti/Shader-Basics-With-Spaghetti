@@ -5,12 +5,12 @@
 //
 // MIT License 
 //
-// prerequisites: color-to-greyscale
+// prerequisites: color-to-greyscale, simple-box-blur
 
 shader_type spatial;
 render_mode unshaded, cull_disabled;
 
-uniform sampler2D screen_texture : hint_screen_texture, filter_linear_mipmap; // screen texture, in Godot 3.x we would use `SCREEN_TEXTURE`
+uniform sampler2D screen_texture : hint_screen_texture, filter_linear_mipmap;
 uniform float min_step : hint_range(0.0, 1.0, 0.01) = 0.4;
 uniform float max_step : hint_range(0.0, 1.0, 0.01) = 0.6;
 
@@ -26,22 +26,20 @@ const mat2 ky = mat2(
 	vec2(-1, 0)
 );
 
-// affects verticies
 void vertex() { 
 	POSITION = vec4(VERTEX, 1.0); // assign mesh's position to viewport
 }
 
-// affects color
 void fragment() { 
 	
-	vec4 texture_color = texture(screen_texture, SCREEN_UV); // sample screen texture
+	vec4 texture_color = texture(screen_texture, SCREEN_UV);
 	
 	mat2 I; // Matrix is essentially an array of vectors (in this case vector2s)
 	for (int i = -1; i <= 1; i++ ) {
 	    for (int j = -1; j <= 1; j++) {
-	        vec3 sample_around_pixel = texelFetch(screen_texture, ivec2(FRAGCOORD.xy) + ivec2(i, j), 0).rgb; // lookup pixels on the screen_texture with given coordinates
-	        vec3 sample_grey = vec3(sample_around_pixel.r * 0.3, sample_around_pixel.g * 0.59, sample_around_pixel.b * 0.11); // multiply looked up colors by greyscale weights
-	        I[i+1][j+1] = sample_grey.r + sample_grey.g + sample_grey.b; // add the weights together to create a greyscale color
+	        vec3 sample_around_pixel = texelFetch(screen_texture, ivec2(FRAGCOORD.xy) + ivec2(i, j), 0).rgb;
+	        vec3 sample_grey = vec3(sample_around_pixel.r * 0.3, sample_around_pixel.g * 0.59, sample_around_pixel.b * 0.11);
+	        I[i+1][j+1] = sample_grey.r + sample_grey.g + sample_grey.b;
 	    }
 	}
 
