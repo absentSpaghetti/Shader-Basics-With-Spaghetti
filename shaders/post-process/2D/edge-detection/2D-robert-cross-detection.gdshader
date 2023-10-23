@@ -46,7 +46,7 @@ void fragment() {
 	
 	
 	// strength of the effect;
-	g = smoothstep(max_step, min_step, g);
+	g = smoothstep(min_step, max_step, g);
 	
 	COLOR = vec4(vec3(g), 1.0);
 	

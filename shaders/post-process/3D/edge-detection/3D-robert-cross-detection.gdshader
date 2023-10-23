@@ -53,7 +53,7 @@ void fragment() {
 	
 	
 	// strength of the effect;
-	g = smoothstep(max_step, min_step, g);
+	g = smoothstep(min_step, max_step, g);
 	
 	ALBEDO = vec3(g);
 	

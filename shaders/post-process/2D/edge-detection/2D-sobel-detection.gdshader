@@ -63,7 +63,7 @@ void fragment() {
 	
 	
 	// strength of the effect;
-	g = smoothstep(max_step, min_step, g); // smoothstep() smooths out a value over a curve if it is within min and max steps. Otherwise, it returns 0 (if smaller than min_step) and 1 (if bigger than max_step)
+	g = smoothstep(min_step, max_step, g); // smoothstep() smooths out a value over a curve if it is within min and max steps. Otherwise, it returns 0 (if smaller than min_step) and 1 (if bigger than max_step)
 	
 	COLOR = vec4(vec3(g), 1.0);
 	
