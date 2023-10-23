@@ -1,17 +1,24 @@
-[gd_scene load_steps=15 format=3 uid="uid://dkghn76dd0wiy"]
+[gd_scene load_steps=18 format=3 uid="uid://dkghn76dd0wiy"]
 
 [ext_resource type="Script" path="res://scenes/test_world_basic/camera_pivot.gd" id="1_xhwmj"]
-[ext_resource type="Shader" path="res://shaders/3D/edge-detection/sobel-detection.gdshader" id="2_anqug"]
+[ext_resource type="Shader" path="res://shaders/post-process/3D/edge-detection/3D-sobel-detection.gdshader" id="2_nhisn"]
+[ext_resource type="Shader" path="res://shaders/post-process/2D/edge-detection/2D-sobel-detection.gdshader" id="3_adm3g"]
+[ext_resource type="Texture2D" uid="uid://bjq8qgbj6txob" path="res://scenes/test_world_basic/City Landscape - Bing Hui Yau.jpg" id="4_bt8e2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vdpyk"]
 render_priority = 0
-shader = ExtResource("2_anqug")
+shader = ExtResource("2_nhisn")
 shader_parameter/min_step = 0.4
 shader_parameter/max_step = 0.6
 
 [sub_resource type="QuadMesh" id="QuadMesh_dcf4f"]
 material = SubResource("ShaderMaterial_vdpyk")
 size = Vector2(2, 2)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uaj2q"]
+shader = ExtResource("3_adm3g")
+shader_parameter/min_step = 0.4
+shader_parameter/max_step = 0.6
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0qgtd"]
 albedo_color = Color(0, 0, 0, 1)
@@ -37,27 +44,27 @@ emission = Color(0, 1, 1, 1)
 metallic = 1.0
 roughness = 0.0
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_drhpk"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_vlrrg"]
+rayleigh_color = Color(0.341176, 0.568627, 1, 1)
+mie_eccentricity = 0.96
+mie_color = Color(1, 1, 1, 1)
+turbidity = 32.0
+ground_color = Color(0.690196, 0.266667, 0.2, 1)
 
-[sub_resource type="Sky" id="Sky_bkbgy"]
-sky_material = SubResource("ProceduralSkyMaterial_drhpk")
+[sub_resource type="Sky" id="Sky_efoib"]
+sky_material = SubResource("PhysicalSkyMaterial_vlrrg")
+radiance_size = 1
 
-[sub_resource type="Environment" id="Environment_h3d8m"]
-sky = SubResource("Sky_bkbgy")
-ambient_light_source = 3
-reflected_light_source = 2
-tonemap_mode = 2
-ssr_enabled = true
+[sub_resource type="Environment" id="Environment_5ijwd"]
+background_mode = 2
+sky = SubResource("Sky_efoib")
 ssao_enabled = true
-ssil_enabled = true
-sdfgi_bounce_feedback = 1.0
-sdfgi_cascades = 2
-sdfgi_min_cell_size = 0.0585938
-sdfgi_cascade0_distance = 3.75
-sdfgi_max_distance = 15.0
+sdfgi_enabled = true
+sdfgi_bounce_feedback = 0.7
+sdfgi_cascades = 3
+sdfgi_y_scale = 0
 glow_enabled = true
+glow_normalized = true
 
 [node name="test_world_basic" type="Node3D"]
 
@@ -82,32 +89,51 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="camera_controls" type="Label" parent="camera_pivot/camera_UI"]
+[node name="post_in_2D" type="ColorRect" parent="camera_pivot/camera_UI"]
+visible = false
+material = SubResource("ShaderMaterial_uaj2q")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0588235, 0.0588235, 0.0588235, 0)
+
+[node name="box" type="ColorRect" parent="camera_pivot/camera_UI"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 184.0
+offset_bottom = 80.0
+color = Color(0, 0, 0, 0.164706)
+
+[node name="camera_controls" type="Label" parent="camera_pivot/camera_UI/box"]
 layout_mode = 2
-offset_left = 16.0
-offset_top = 16.0
-offset_right = 175.0
-offset_bottom = 42.0
+offset_left = 3.808
+offset_top = 4.96
+offset_right = 162.808
+offset_bottom = 30.96
 text = "CAMERA CONTROLS:"
 
-[node name="vbox" type="VBoxContainer" parent="camera_pivot/camera_UI"]
+[node name="vbox" type="VBoxContainer" parent="camera_pivot/camera_UI/box"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.028
 anchor_top = 0.062
 anchor_right = 0.028
 anchor_bottom = 0.062
-offset_left = -0.256001
-offset_top = -0.176003
-offset_right = 158.744
-offset_bottom = 175.824
+offset_left = 3.072
+offset_top = 16.56
+offset_right = 162.072
+offset_bottom = 192.56
 
-[node name="oribting" type="CheckButton" parent="camera_pivot/camera_UI/vbox"]
+[node name="oribting" type="CheckButton" parent="camera_pivot/camera_UI/box/vbox"]
 layout_mode = 2
 button_pressed = true
 text = "ORBITING"
 
-[node name="speedSlider" type="HSlider" parent="camera_pivot/camera_UI/vbox"]
+[node name="speedSlider" type="HSlider" parent="camera_pivot/camera_UI/box/vbox"]
 layout_mode = 2
 min_value = 0.01
 max_value = 5.0
@@ -115,38 +141,42 @@ step = 0.01
 value = 0.51
 ticks_on_borders = true
 
-[node name="meshes" type="Node3D" parent="."]
+[node name="meshes and objects" type="Node3D" parent="."]
 
-[node name="floor" type="MeshInstance3D" parent="meshes"]
+[node name="floor" type="MeshInstance3D" parent="meshes and objects"]
 mesh = SubResource("QuadMesh_ju06o")
 skeleton = NodePath("../..")
 
-[node name="cube_emmisive" type="MeshInstance3D" parent="meshes"]
+[node name="cube_emmisive" type="MeshInstance3D" parent="meshes and objects"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.5, 0)
 mesh = SubResource("BoxMesh_lned3")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_xdkj3")
 
-[node name="cube_standard" type="MeshInstance3D" parent="meshes"]
+[node name="cube_standard" type="MeshInstance3D" parent="meshes and objects"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.5, 0)
 mesh = SubResource("BoxMesh_lned3")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_0fql0")
 
-[node name="sphere_reflective" type="MeshInstance3D" parent="meshes"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+[node name="sphere_reflective" type="MeshInstance3D" parent="meshes and objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.63562e-05, 0.503395, -0.000467777)
 mesh = SubResource("SphereMesh_ps6q1")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_fhi1o")
 
+[node name="city" type="Sprite3D" parent="meshes and objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -14)
+texture = ExtResource("4_bt8e2")
+
 [node name="environment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_h3d8m")
+environment = SubResource("Environment_5ijwd")
 
 [node name="directional" type="DirectionalLight3D" parent="environment"]
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
-visible = false
 light_color = Color(1, 0.952941, 0.909804, 1)
 shadow_enabled = true
+shadow_opacity = 0.8
 
-[connection signal="toggled" from="camera_pivot/camera_UI/vbox/oribting" to="camera_pivot" method="_on_oribting_toggled"]
-[connection signal="value_changed" from="camera_pivot/camera_UI/vbox/speedSlider" to="camera_pivot" method="_on_speed_slider_value_changed"]
+[connection signal="toggled" from="camera_pivot/camera_UI/box/vbox/oribting" to="camera_pivot" method="_on_oribting_toggled"]
+[connection signal="value_changed" from="camera_pivot/camera_UI/box/vbox/speedSlider" to="camera_pivot" method="_on_speed_slider_value_changed"]

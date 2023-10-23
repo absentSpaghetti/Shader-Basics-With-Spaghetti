@@ -1,3 +1,6 @@
+Sprite3D
+ColorRect
+Control
 MeshInstance3D
 Node3D
 VSeparator
@@ -7,6 +10,5 @@ VBoxContainer
 Label
 CheckButton
 HBoxContainer
-Control
 Camera3D
 CSGBox3D
