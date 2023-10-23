@@ -1,26 +1,25 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1698085609
+::res://::1698086243
 autoload.gd::GDScript::-1::1697997991::0::1::::<>Node<>::
 icon.svg::CompressedTexture2D::3750144342241123986::1697989202::1697989207::1::::<><>::
 README.md::TextFile::-1::1698000840::0::1::::<><>::
 ::res://scenes/::1698084677
-::res://scenes/test_world_basic/::1698086170
+::res://scenes/test_world_basic/::1698086480
 camera_pivot.gd::GDScript::-1::1698010276::0::1::::<>Node3D<>::
 City Landscape - Bing Hui Yau.jpg::CompressedTexture2D::3053182871100144929::1698084673::1698084680::1::::<><>::
-test_world_basic.tscn::PackedScene::7873986717031579672::1698086243::0::1::::<><>::res://scenes/test_world_basic/camera_pivot.gd<>res://shaders/2D/edge-detection/2D-sobel-detection.gdshader<>res://shaders/3D/edge-detection/3D-sobel-detection.gdshader<>uid://bjq8qgbj6txob::::res://scenes/test_world_basic/City Landscape - Bing Hui Yau.jpg
-::res://shaders/::1698086241
-::res://shaders/2D/::1698055428
-::res://shaders/2D/edge-detection/::1698058059
+test_world_basic.tscn::PackedScene::7873986717031579672::1698086480::0::1::::<><>::res://scenes/test_world_basic/camera_pivot.gd<>res://shaders/post-process/3D/edge-detection/3D-sobel-detection.gdshader<>res://shaders/post-process/2D/edge-detection/2D-sobel-detection.gdshader<>uid://bjq8qgbj6txob::::res://scenes/test_world_basic/City Landscape - Bing Hui Yau.jpg
+::res://shaders/::1698087083
+::res://shaders/object/::1698087089
+::res://shaders/object/2D/::1698087087
+::res://shaders/object/3D/::1698087089
+::res://shaders/post-process/::1698086243
+::res://shaders/post-process/2D/::1698055428
+::res://shaders/post-process/2D/edge-detection/::1698058059
 2D-robert-cross-detection.gdshader::Shader::-1::1698058003::0::1::::<><>::
 2D-sobel-detection.gdshader::Shader::-1::1698058059::0::1::::<><>::
-::res://shaders/3D/::1698000077
-::res://shaders/3D/color-to-greyscale/::1698086170
-weighted color-to-greyscale.gdshader::Shader::-1::1698086170::0::1::::<><>::
-::res://shaders/3D/edge-detection/::1698086170
+::res://shaders/post-process/3D/::1698000077
+::res://shaders/post-process/3D/color-to-greyscale/::1698086249
+weighted color-to-greyscale.gdshader::Shader::-1::1698086249::0::1::::<><>::
+::res://shaders/post-process/3D/edge-detection/::1698086480
 3D-robert-cross-detection.gdshader::Shader::-1::1698058003::0::1::::<><>::
-3D-sobel-detection.gdshader::Shader::-1::1698086170::0::1::::<><>::
-::res://shaders/post-process/::1698086241
-::res://shaders/post-process/2D/::0
-::res://shaders/post-process/2D/edge-detection/::0
-::res://shaders/post-process/3D/::0
-::res://shaders/post-process/3D/edge-detection/::0
+3D-sobel-detection.gdshader::Shader::-1::1698086480::0::1::::<><>::

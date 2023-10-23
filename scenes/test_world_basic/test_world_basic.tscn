@@ -76,6 +76,7 @@ transform = Transform3D(1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, 
 
 [node name="post_in_3D" type="MeshInstance3D" parent="camera_pivot/camera"]
 transform = Transform3D(1, 0, 0, 0, 0.906308, -0.422618, 0, 0.422618, 0.906308, 0, -0.122144, -4.47047)
+visible = false
 mesh = SubResource("QuadMesh_dcf4f")
 skeleton = NodePath("../../camera_UI")
 metadata/_edit_group_ = true

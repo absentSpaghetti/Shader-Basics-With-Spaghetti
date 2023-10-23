@@ -3,3 +3,6 @@ res://shaders/3D/edge-detection/3D-sobel-detection.gdshader
 res://shaders/3D/color-to-greyscale/weighted color-to-greyscale.gdshader
 res://shaders/post-process/3D/edge-detection/3D-sobel-detection.gdshader
 res://shaders/post-process/3D/color-to-greyscale/weighted color-to-greyscale.gdshader
+res://shaders/post-process/2D/edge-detection/2D-robert-cross-detection.gdshader
+res://shaders/post-process/3D/edge-detection/3D-robert-cross-detection.gdshader
+res://shaders/post-process/2D/color-to-greyscale/weighted color-to-greyscale.gdshader
