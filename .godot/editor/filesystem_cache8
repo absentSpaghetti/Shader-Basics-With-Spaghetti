@@ -1,31 +1,33 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1698093444
+::res://::1698172741
 autoload.gd::GDScript::-1::1697997991::0::1::::<>Node<>::
 icon.svg::CompressedTexture2D::3750144342241123986::1697989202::1697989207::1::::<><>::
-README.md::TextFile::-1::1698088932::0::1::::<><>::
+README.md::TextFile::-1::1698093846::0::1::::<><>::
 ::res://scenes/::1698084677
-::res://scenes/test_world_basic/::1698093444
-camera_pivot.gd::GDScript::-1::1698010276::0::1::::<>Node3D<>::
+::res://scenes/test_world_basic/::1698173409
+camera_pivot.gd::GDScript::-1::1698173409::0::1::::<>Node3D<>::
 City Landscape - Bing Hui Yau.jpg::CompressedTexture2D::3053182871100144929::1698084673::1698084680::1::::<><>::
-test_world_basic.tscn::PackedScene::7873986717031579672::1698093522::0::1::::<><>::res://scenes/test_world_basic/camera_pivot.gd<>res://shaders/post-process/3D/blurs/3D-simple-box-blur.gdshader<>res://shaders/post-process/2D/edge-detection/2D-sobel-detection.gdshader<>uid://bjq8qgbj6txob::::res://scenes/test_world_basic/City Landscape - Bing Hui Yau.jpg
+test_world_basic.tscn::PackedScene::7873986717031579672::1698173571::0::1::::<><>::res://scenes/test_world_basic/camera_pivot.gd<>res://shaders/post-process/3D/depth-shaders/depth.gdshader<>res://shaders/post-process/2D/blurs/2D-simple-box-blur.gdshader<>uid://bjq8qgbj6txob::::res://scenes/test_world_basic/City Landscape - Bing Hui Yau.jpg
 ::res://shaders/::1698087083
 ::res://shaders/object/::1698087089
 ::res://shaders/object/2D/::1698087087
 ::res://shaders/object/3D/::1698087089
 ::res://shaders/post-process/::1698086243
 ::res://shaders/post-process/2D/::1698093453
-::res://shaders/post-process/2D/blurs/::1698093455
-simple-box-blur.gdshader::Shader::-1::1698093522::0::1::::<><>::
-::res://shaders/post-process/2D/color-to-greyscale/::1698093444
-2D-weighted color-to-greyscale.gdshader::Shader::-1::1698093522::0::1::::<><>::
-::res://shaders/post-process/2D/edge-detection/::1698093444
-2D-robert-cross-detection.gdshader::Shader::-1::1698093522::0::1::::<><>::
-2D-sobel-detection.gdshader::Shader::-1::1698093522::0::1::::<><>::
-::res://shaders/post-process/3D/::1698090590
-::res://shaders/post-process/3D/blurs/::1698093461
-3D-simple-box-blur.gdshader::Shader::-1::1698093522::0::1::::<><>::
-::res://shaders/post-process/3D/color-to-greyscale/::1698093444
-3D-weighted color-to-greyscale.gdshader::Shader::-1::1698093522::0::1::::<><>::
-::res://shaders/post-process/3D/edge-detection/::1698093444
-3D-robert-cross-detection.gdshader::Shader::-1::1698093522::0::1::::<><>::
-3D-sobel-detection.gdshader::Shader::-1::1698093522::0::1::::<><>::
+::res://shaders/post-process/2D/blurs/::1698169936
+2D-simple-box-blur.gdshader::Shader::-1::1698169936::0::1::::<><>::
+::res://shaders/post-process/2D/color-to-greyscale/::1698094898
+2D-weighted color-to-greyscale.gdshader::Shader::-1::1698094898::0::1::::<><>::
+::res://shaders/post-process/2D/edge-detection/::1698094898
+2D-robert-cross-detection.gdshader::Shader::-1::1698094898::0::1::::<><>::
+2D-sobel-detection.gdshader::Shader::-1::1698094898::0::1::::<><>::
+::res://shaders/post-process/3D/::1698172741
+::res://shaders/post-process/3D/blurs/::1698169936
+3D-simple-box-blur.gdshader::Shader::-1::1698173571::0::1::::<><>::
+::res://shaders/post-process/3D/color-to-greyscale/::1698094898
+3D-weighted color-to-greyscale.gdshader::Shader::-1::1698094898::0::1::::<><>::
+::res://shaders/post-process/3D/depth-shaders/::1698173409
+depth.gdshader::Shader::-1::1698173571::0::1::::<><>::
+::res://shaders/post-process/3D/edge-detection/::1698094898
+3D-robert-cross-detection.gdshader::Shader::-1::1698094898::0::1::::<><>::
+3D-sobel-detection.gdshader::Shader::-1::1698094898::0::1::::<><>::

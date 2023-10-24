@@ -12,3 +12,5 @@ data_*/
 .godot/mono/metadata/ide_messaging_meta.txt
 .godot/editor/filesystem_cache8
 .godot/editor/filesystem_cache8
+.godot/editor
+/.godot

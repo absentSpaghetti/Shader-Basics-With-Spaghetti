@@ -2,8 +2,15 @@ extends Node3D
 
 @onready var cameraUI := $camera_UI
 
-var isOrbiting : bool = true
+@export var isOrbiting : bool = true
+@export var isVisibleUI : bool = true
 var rotationSpeed : float = 0.5
+
+func _ready() -> void:
+	if isVisibleUI == true:
+		cameraUI.show()
+	else:
+		cameraUI.hide()
 
 func _process(delta: float) -> void:
 	if isOrbiting == true:
