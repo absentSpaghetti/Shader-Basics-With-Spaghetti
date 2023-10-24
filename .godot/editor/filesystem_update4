@@ -1,6 +1,0 @@
-res://scenes/test_world_basic/test_world_basic.tscn
-res://shaders/post-process/3D/depth/depth.gdshader
-res://shaders/post-process/3D/depth-shaders/depth.gdshader
-res://scenes/test_world_basic/camera_pivot.gd
-res://shaders/post-process/3D/blurs/3D-simple-box-blur.gdshader
-res://shaders/post-process/3D/depth-shaders/linear-depth-fog.gdshader
